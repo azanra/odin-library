@@ -1,4 +1,4 @@
-export default function Book(title, author, pages, haveRead) {
+function Book(title, author, pages, haveRead) {
   this.title = title;
   this.author = author;
   this.pages = pages;
@@ -8,3 +8,11 @@ export default function Book(title, author, pages, haveRead) {
 Book.prototype.info = function () {
   return `${this.title}. ${this.author}, ${this.pages} pages, ${this.haveRead}`;
 };
+
+function addBookToLibrary(libraryArr, title, author, pages, haveRead) {
+  let newBook = new Book(title, author, pages, haveRead);
+  libraryArr.push(newBook);
+  return libraryArr;
+}
+
+export { Book, addBookToLibrary };

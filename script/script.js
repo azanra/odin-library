@@ -1,6 +1,9 @@
-import Book from "./model/book.js";
+import { addBookToLibrary } from "./model/book.js";
 
-const firstBook = new Book(
+let myLibrary = [];
+
+myLibrary = addBookToLibrary(
+  myLibrary,
   "Three days of happiness",
   "sugaru miaki",
   512,
@@ -8,4 +11,4 @@ const firstBook = new Book(
 );
 
 const para = document.querySelector("p");
-para.textContent = firstBook.info();
+para.textContent = myLibrary[0].info();
