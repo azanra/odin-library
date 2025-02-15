@@ -1,6 +1,8 @@
 import { Author } from "./author.js";
 import { CreateElement } from "./createElement.js";
 import { elementAttr } from "./elementAttr.js";
+import { Page } from "./page.js";
+import { Read } from "./read.js";
 import { Title } from "./title.js";
 
 function Form() {
@@ -16,6 +18,8 @@ function Form() {
   );
   Title();
   Author();
+  Page();
+  Read();
 }
 
 export { Form };

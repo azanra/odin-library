@@ -63,6 +63,71 @@ const elementAttr = {
       placeholder: "author",
     },
   },
+  pageContainer: {
+    parent: ".form-input",
+    element: "div",
+    attribute: {
+      class: "page-container",
+    },
+  },
+  pageLabel: {
+    parent: ".page-container",
+    element: "label",
+    attribute: {
+      class: "page-label",
+      for: "page-input",
+    },
+    text: "Page : ",
+  },
+  pageInput: {
+    parent: ".page-container",
+    element: "input",
+    attribute: {
+      type: "text",
+      id: "page-input",
+      placeholder: "page amount",
+    },
+  },
+  readContainer: {
+    parent: ".form-input",
+    element: "div",
+    attribute: {
+      class: "read-container",
+    },
+  },
+  readLabel: {
+    parent: ".read-container",
+    element: "label",
+    attribute: {
+      class: "read-label",
+      for: "read-select",
+    },
+    text: "Have read : ",
+  },
+  readSelect: {
+    parent: ".read-container",
+    element: "select",
+    attribute: {
+      name: "HaveRead",
+      id: "read-select",
+    },
+  },
+  haveReadOption: {
+    parent: "#read-select",
+    element: "option",
+    attribute: {
+      value: "read",
+    },
+    text: "Yes",
+  },
+  notReadOption: {
+    parent: "#read-select",
+    element: "option",
+    attribute: {
+      value: "not yet",
+    },
+    text: "Not yet",
+  },
 };
 
 export { elementAttr };
