@@ -1,3 +1,4 @@
+import { Author } from "./author.js";
 import { CreateElement } from "./createElement.js";
 import { elementAttr } from "./elementAttr.js";
 import { Title } from "./title.js";
@@ -14,6 +15,7 @@ function Form() {
     elementAttr.form.attribute
   );
   Title();
+  Author();
 }
 
 export { Form };

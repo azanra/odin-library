@@ -38,6 +38,31 @@ const elementAttr = {
       placeholder: "title",
     },
   },
+  authorContainer: {
+    parent: ".form-input",
+    element: "div",
+    attribute: {
+      class: "author-container",
+    },
+  },
+  authorLabel: {
+    parent: ".author-container",
+    element: "label",
+    attribute: {
+      class: "author-label",
+      for: "author-input",
+    },
+    text: "Author : ",
+  },
+  authorInput: {
+    parent: ".author-container",
+    element: "input",
+    attribute: {
+      type: "text",
+      id: "author-input",
+      placeholder: "author",
+    },
+  },
 };
 
 export { elementAttr };
