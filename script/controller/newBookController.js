@@ -1,5 +1,3 @@
-import { CreateElement } from "../view/createElement.js";
-import { elementAttr } from "../view/elementAttr.js";
 import { Form } from "../view/form.js";
 import {
   getElementValue,
