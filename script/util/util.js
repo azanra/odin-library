@@ -9,4 +9,10 @@ function getElementValue(element) {
   return getElement.value;
 }
 
-export { setMultipleAttr, getElementValue };
+function removeList(libraryArr) {
+  for (let i = 0; i < libraryArr.length; i++) {
+    let elementList = document.querySelector(`[id='${i}']`);
+    elementList.remove();
+  }
+}
+export { setMultipleAttr, getElementValue, removeList };
