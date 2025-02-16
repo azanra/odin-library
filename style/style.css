@@ -14,14 +14,28 @@ body {
 
 .container {
   border: 1px solid var(--contrast-color);
-  padding: 5rem;
 }
 
 button {
-  border-radius: 5px;
   padding: 0.75rem 2rem;
   background-color: var(--btn-bg);
   color: var(--contrast-color);
   border: none;
   font-weight: bold;
+  margin-right: 1rem;
+}
+
+button,
+dialog,
+.container {
+  border-radius: 5px;
+}
+
+dialog,
+.container {
+  padding: 5rem;
+}
+
+dialog div {
+  margin-bottom: 2rem;
 }
