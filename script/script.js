@@ -24,4 +24,4 @@ console.log(myLibrary);
 
 bookCard(myLibrary);
 
-NewBookControlller(myLibrary);
+myLibrary = NewBookControlller(myLibrary);
