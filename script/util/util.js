@@ -31,10 +31,19 @@ function removeBook(libraryArr, index) {
   }
 }
 
+function updateBook(libraryArr, index) {
+  for (let i = 0; i < libraryArr.length; i++) {
+    if (i === Number(index)) {
+      libraryArr[i].isRead();
+    }
+  }
+}
+
 export {
   setMultipleAttr,
   getElementValue,
   removeList,
   removeElement,
   removeBook,
+  updateBook,
 };
