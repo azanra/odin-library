@@ -7,6 +7,10 @@ function bookCard(libraryArr) {
     let bookPara = document.createElement("p");
     bookPara.textContent = libraryArr[i].info();
     bookContainer.append(bookPara);
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.setAttribute("id", "delete-btn");
+    bookContainer.append(deleteBtn);
   }
 }
 

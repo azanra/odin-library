@@ -1,7 +1,12 @@
 import { CreateElement } from "../view/createElement.js";
 import { elementAttr } from "../view/elementAttr.js";
 import { Form } from "../view/form.js";
-import { getElementValue, removeList, removeElement } from "../util/util.js";
+import {
+  getElementValue,
+  removeList,
+  removeElement,
+  removeBook,
+} from "../util/util.js";
 import { addBookToLibrary } from "../model/book.js";
 import { bookCard } from "../view/bookCard.js";
 
@@ -41,7 +46,21 @@ function submitBtnListener(dialog, libraryArr) {
       readValue
     );
     bookCard(libraryArr);
+    deleteBtnListener(libraryArr);
     dialog.close();
+  });
+}
+
+function deleteBtnListener(libraryArr) {
+  const listDeleteBtn = document.querySelectorAll("#delete-btn");
+  listDeleteBtn.forEach((item) => {
+    item.addEventListener("click", () => {
+      let bookIndex = item.parentNode.id;
+      removeList(libraryArr);
+      removeBook(libraryArr, bookIndex);
+      bookCard(libraryArr);
+      deleteBtnListener(libraryArr);
+    });
   });
 }
 
