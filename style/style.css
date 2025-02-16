@@ -19,6 +19,10 @@ body {
   border: 1px solid var(--contrast-color);
 }
 
+.input-btn {
+  margin-bottom: 2rem;
+}
+
 button {
   padding: 0.75rem 2rem;
   background-color: var(--btn-bg);
@@ -32,7 +36,8 @@ button,
 dialog,
 .container,
 input,
-select {
+select,
+.container div {
   border-radius: 5px;
 }
 
@@ -54,6 +59,11 @@ dialog,
 dialog div,
 .container div {
   margin-bottom: 2rem;
+}
+
+.container div {
+  border: 1px solid var(--contrast-color);
+  padding: 1rem;
 }
 
 input,
