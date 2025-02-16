@@ -27,7 +27,9 @@ button {
 
 button,
 dialog,
-.container {
+.container,
+input,
+select {
   border-radius: 5px;
 }
 
@@ -38,4 +40,11 @@ dialog,
 
 dialog div {
   margin-bottom: 2rem;
+}
+
+input,
+select {
+  height: 25px;
+  width: 200px;
+  margin-left: 1rem;
 }
