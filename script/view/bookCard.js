@@ -16,9 +16,10 @@ function bookCard(libraryArr) {
 }
 
 function toggleReadBtn(libraryArr, parentEle) {
-  if (libraryArr.haveRead !== "read") {
+  if (libraryArr.haveRead !== "finished") {
     const updateBtn = document.createElement("button");
     updateBtn.textContent = "Have Read";
+    updateBtn.setAttribute("id", "read-btn");
     parentEle.append(updateBtn);
   }
 }

@@ -116,9 +116,9 @@ const elementAttr = {
     parent: "#read-select",
     element: "option",
     attribute: {
-      value: "read",
+      value: "finished",
     },
-    text: "Yes",
+    text: "Finished",
   },
   notReadOption: {
     parent: "#read-select",

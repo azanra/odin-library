@@ -6,6 +6,7 @@ import {
   removeList,
   removeElement,
   removeBook,
+  updateBook,
 } from "../util/util.js";
 import { addBookToLibrary } from "../model/book.js";
 import { bookCard } from "../view/bookCard.js";
@@ -47,6 +48,7 @@ function submitBtnListener(dialog, libraryArr) {
     );
     bookCard(libraryArr);
     deleteBtnListener(libraryArr);
+    readBtnListener(libraryArr);
     dialog.close();
   });
 }
@@ -59,6 +61,21 @@ function deleteBtnListener(libraryArr) {
       removeList(libraryArr);
       removeBook(libraryArr, bookIndex);
       bookCard(libraryArr);
+      deleteBtnListener(libraryArr);
+      readBtnListener(libraryArr);
+    });
+  });
+}
+
+function readBtnListener(libraryArr) {
+  const readBtn = document.querySelectorAll("#read-btn");
+  readBtn.forEach((item) => {
+    item.addEventListener("click", () => {
+      let updateBookIndex = item.parentNode.id;
+      removeList(libraryArr);
+      updateBook(libraryArr, updateBookIndex);
+      bookCard(libraryArr);
+      readBtnListener(libraryArr);
       deleteBtnListener(libraryArr);
     });
   });
