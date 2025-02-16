@@ -10,6 +10,7 @@ body {
   align-items: center;
   background-color: var(--bg-color);
   color: var(--contrast-color);
+  box-sizing: border-box;
 }
 
 .container {
@@ -38,7 +39,8 @@ dialog,
   padding: 5rem;
 }
 
-dialog div {
+dialog div,
+.container div {
   margin-bottom: 2rem;
 }
 
