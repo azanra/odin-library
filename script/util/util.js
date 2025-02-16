@@ -4,4 +4,9 @@ function setMultipleAttr(element, obj) {
   }
 }
 
-export { setMultipleAttr };
+function getElementValue(element) {
+  const getElement = document.querySelector(element);
+  return getElement.value;
+}
+
+export { setMultipleAttr, getElementValue };
