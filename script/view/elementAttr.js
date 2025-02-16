@@ -128,6 +128,24 @@ const elementAttr = {
     },
     text: "Not yet",
   },
+  submitBtn: {
+    parent: ".form-input",
+    element: "button",
+    attribute: {
+      type: "button",
+      id: "submit-btn",
+    },
+    text: "Submit",
+  },
+  cancelBtn: {
+    parent: ".form-input",
+    element: "button",
+    attribute: {
+      type: "button",
+      id: "cancel-btn",
+    },
+    text: "Cancel",
+  },
 };
 
 export { elementAttr };

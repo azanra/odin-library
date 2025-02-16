@@ -20,6 +20,18 @@ function Form() {
   Author();
   Page();
   Read();
+  CreateElement(
+    elementAttr.submitBtn.parent,
+    elementAttr.submitBtn.element,
+    elementAttr.submitBtn.attribute,
+    elementAttr.submitBtn.text
+  );
+  CreateElement(
+    elementAttr.cancelBtn.parent,
+    elementAttr.cancelBtn.element,
+    elementAttr.cancelBtn.attribute,
+    elementAttr.cancelBtn.text
+  );
 }
 
 export { Form };

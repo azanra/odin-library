@@ -1,4 +1,6 @@
+import { NewBookControlller } from "./controller/newBookController.js";
 import { addBookToLibrary } from "./model/book.js";
+import { bookCard } from "./view/bookCard.js";
 
 let myLibrary = [];
 
@@ -10,5 +12,16 @@ myLibrary = addBookToLibrary(
   "have read"
 );
 
-const para = document.querySelector("p");
-para.textContent = myLibrary[0].info();
+myLibrary = addBookToLibrary(
+  myLibrary,
+  "Your Story",
+  "sugaru miaki",
+  498,
+  "have read"
+);
+
+console.log(myLibrary);
+
+bookCard(myLibrary);
+
+NewBookControlller();
