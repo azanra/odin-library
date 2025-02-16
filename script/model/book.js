@@ -10,7 +10,7 @@ Book.prototype.info = function () {
 };
 
 Book.prototype.isRead = function () {
-  this.haveRead = "Finished";
+  this.haveRead = "finished";
 };
 
 function addBookToLibrary(libraryArr, title, author, pages, haveRead) {

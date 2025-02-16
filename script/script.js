@@ -9,7 +9,7 @@ myLibrary = addBookToLibrary(
   "Three days of happiness",
   "sugaru miaki",
   512,
-  "have read"
+  "read"
 );
 
 myLibrary = addBookToLibrary(
@@ -17,7 +17,7 @@ myLibrary = addBookToLibrary(
   "Your Story",
   "sugaru miaki",
   498,
-  "have read"
+  "read"
 );
 
 console.log(myLibrary);

@@ -11,6 +11,15 @@ function bookCard(libraryArr) {
     deleteBtn.textContent = "Delete";
     deleteBtn.setAttribute("id", "delete-btn");
     bookContainer.append(deleteBtn);
+    toggleReadBtn(libraryArr[i], bookContainer);
+  }
+}
+
+function toggleReadBtn(libraryArr, parentEle) {
+  if (libraryArr.haveRead !== "read") {
+    const updateBtn = document.createElement("button");
+    updateBtn.textContent = "Have Read";
+    parentEle.append(updateBtn);
   }
 }
 

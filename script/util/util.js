@@ -30,6 +30,7 @@ function removeBook(libraryArr, index) {
     }
   }
 }
+
 export {
   setMultipleAttr,
   getElementValue,
