@@ -1,0 +1,12 @@
+:root {
+  --bg-color: rgb(17 24 39);
+  --contrast-color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  color: var(--contrast-color);
+}
