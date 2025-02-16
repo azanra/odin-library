@@ -22,4 +22,18 @@ function removeElement(elementToDel) {
     refELe.remove();
   }
 }
-export { setMultipleAttr, getElementValue, removeList, removeElement };
+
+function removeBook(libraryArr, index) {
+  for (let i = 0; i < libraryArr.length; i++) {
+    if (i === Number(index)) {
+      libraryArr.splice(index, 1);
+    }
+  }
+}
+export {
+  setMultipleAttr,
+  getElementValue,
+  removeList,
+  removeElement,
+  removeBook,
+};
