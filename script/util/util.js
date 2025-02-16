@@ -15,4 +15,11 @@ function removeList(libraryArr) {
     elementList.remove();
   }
 }
-export { setMultipleAttr, getElementValue, removeList };
+
+function removeElement(elementToDel) {
+  let refELe = document.querySelector(elementToDel);
+  if (refELe !== null) {
+    refELe.remove();
+  }
+}
+export { setMultipleAttr, getElementValue, removeList, removeElement };
