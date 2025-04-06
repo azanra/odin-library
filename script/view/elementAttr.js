@@ -13,6 +13,32 @@ const elementAttr = {
       class: "form-input",
     },
   },
+  idContainer: {
+    parent: ".form-input",
+    element: "div",
+    attribute: {
+      class: "id-container",
+    },
+  },
+  idLabel: {
+    parent: ".id-container",
+    element: "label",
+    attribute: {
+      for: "id-input",
+      class: "id-label",
+    },
+    textContent: "Id : ",
+  },
+  idInput: {
+    parent: ".id-container",
+    element: "input",
+    attribute: {
+      type: "number",
+      id: "id-input",
+      name: "id",
+      placeholder: "Id",
+    },
+  },
   titleContainer: {
     parent: ".form-input",
     element: "div",

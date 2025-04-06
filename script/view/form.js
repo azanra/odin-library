@@ -1,6 +1,7 @@
 import { Author } from "./author.js";
 import { CreateElement } from "./createElement.js";
 import { elementAttr } from "./elementAttr.js";
+import { Id } from "./id.js";
 import { Page } from "./page.js";
 import { Read } from "./read.js";
 import { Title } from "./title.js";
@@ -16,6 +17,7 @@ function Form() {
     elementAttr.form.element,
     elementAttr.form.attribute
   );
+  const idInput = new Id();
   Title();
   Author();
   Page();
