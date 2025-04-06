@@ -1,5 +1,6 @@
-class Book {
-  constructor(title, author, pages, haveRead) {
+export class Book {
+  constructor(id, title, author, pages, haveRead) {
+    this.id = id;
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -12,11 +13,3 @@ class Book {
     this.haveRead = "finished";
   }
 }
-
-function addBookToLibrary(libraryArr, title, author, pages, haveRead) {
-  let newBook = new Book(title, author, pages, haveRead);
-  libraryArr.push(newBook);
-  return libraryArr;
-}
-
-export { Book, addBookToLibrary };
