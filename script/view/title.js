@@ -1,7 +1,7 @@
 import { CreateElement } from "./createElement.js";
 import { elementAttr } from "./elementAttr.js";
 
-export class Title {
+export class TitleInput {
   constructor() {
     CreateElement(
       elementAttr.titleContainer.parent,

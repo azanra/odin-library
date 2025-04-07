@@ -1,7 +1,7 @@
 import { CreateElement } from "./createElement.js";
 import { elementAttr } from "./elementAttr.js";
 
-export class Read {
+export class ReadStatusInput {
   constructor() {
     CreateElement(
       elementAttr.readContainer.parent,

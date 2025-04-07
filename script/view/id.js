@@ -1,7 +1,7 @@
 import { CreateElement } from "./createElement.js";
 import { elementAttr } from "./elementAttr.js";
 
-export class Id {
+export class IdInput {
   constructor() {
     CreateElement(
       elementAttr.idContainer.parent,

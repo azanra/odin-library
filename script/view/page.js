@@ -1,7 +1,7 @@
 import { CreateElement } from "./createElement.js";
 import { elementAttr } from "./elementAttr.js";
 
-export class Page {
+export class PageInput {
   constructor() {
     CreateElement(
       elementAttr.pageContainer.parent,
