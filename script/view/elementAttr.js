@@ -109,7 +109,7 @@ const elementAttr = {
     parent: ".page-container",
     element: "input",
     attribute: {
-      type: "text",
+      type: "number",
       id: "page-input",
       placeholder: "page amount",
     },
