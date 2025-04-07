@@ -1,49 +1,23 @@
-function setMultipleAttr(element, obj) {
-  for (let key in obj) {
-    element.setAttribute(key, obj[key]);
+export class Util {
+  static setMultipleAttr(element, attribute) {
+    for (let key in attribute) {
+      element.setAttribute(key, attribute[key]);
+    }
   }
-}
-
-function getElementValue(element) {
-  const getElement = document.querySelector(element);
-  return getElement.value;
-}
-
-function removeList(libraryArr) {
-  for (let i = 0; i < libraryArr.length; i++) {
-    let elementList = document.querySelector(`[id='${i}']`);
-    elementList.remove();
+  static getElementValue(element) {
+    const getElement = document.querySelector(element);
+    return getElement.value;
   }
-}
-
-function removeElement(elementToDel) {
-  let refELe = document.querySelector(elementToDel);
-  if (refELe !== null) {
-    refELe.remove();
+  static removeAllBook(library) {
+    library.forEach((index) => {
+      const book = document.querySelector(`[id='${index}']`);
+      book.remove();
+    });
   }
-}
-
-function removeBook(libraryArr, index) {
-  for (let i = 0; i < libraryArr.length; i++) {
-    if (i === Number(index)) {
-      libraryArr.splice(index, 1);
+  static removeElement(query) {
+    let element = document.querySelector(query);
+    if (element !== null) {
+      element.remove();
     }
   }
 }
-
-function updateBook(libraryArr, index) {
-  for (let i = 0; i < libraryArr.length; i++) {
-    if (i === Number(index)) {
-      libraryArr[i].isRead();
-    }
-  }
-}
-
-export {
-  setMultipleAttr,
-  getElementValue,
-  removeList,
-  removeElement,
-  removeBook,
-  updateBook,
-};
