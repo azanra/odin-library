@@ -1,27 +1,39 @@
-function bookCard(libraryArr) {
-  for (let i = 0; i < libraryArr.length; i++) {
-    const container = document.querySelector(".container");
-    let bookContainer = document.createElement("div");
-    bookContainer.setAttribute("id", i);
-    container.append(bookContainer);
-    let bookPara = document.createElement("p");
-    bookPara.textContent = libraryArr[i].info();
-    bookContainer.append(bookPara);
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Delete";
-    deleteBtn.setAttribute("id", "delete-btn");
-    bookContainer.append(deleteBtn);
-    toggleReadBtn(libraryArr[i], bookContainer);
+import { Util } from "../util/util.js";
+import { elementAttr } from "./elementAttr.js";
+
+export class BookCard {
+  constructor(library) {
+    const library = library;
+    library.forEach((book, index) => {
+      const attr = {};
+      attr.id = index;
+      Util.CreateElement(
+        elementAttr.bookContainer.parent,
+        elementAttr.bookContainer.element,
+        attr
+      );
+      Util.CreateElement(
+        `[id='${attr.id}']`,
+        elementAttr.bookPara.element,
+        elementAttr.bookPara.attr,
+        book.info()
+      );
+      Util.CreateElement(
+        `[id='${attr.id}']`,
+        elementAttr.deleteBtn.element,
+        elementAttr.deleteBtn.attribute,
+        elementAttr.deleteBtn.text
+      );
+      this.toggleReadBtn(book, `[id='${attr.id}']`);
+    });
+  }
+  toggleReadBtn(book, parentElement) {
+    if (book.haveRead !== "finished") {
+      Util.CreateElement(
+        parentElement,
+        elementAttr.readBtn.element,
+        elementAttr.readBtn.attribute
+      );
+    }
   }
 }
-
-function toggleReadBtn(libraryArr, parentEle) {
-  if (libraryArr.haveRead !== "finished") {
-    const updateBtn = document.createElement("button");
-    updateBtn.textContent = "Have Read";
-    updateBtn.setAttribute("id", "read-btn");
-    parentEle.append(updateBtn);
-  }
-}
-
-export { bookCard };

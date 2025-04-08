@@ -172,6 +172,32 @@ const elementAttr = {
     },
     text: "Cancel",
   },
+  bookContainer: {
+    parent: ".container",
+    element: "div",
+    attr: {
+      id: "",
+    },
+  },
+  bookPara: {
+    element: "p",
+    attr: {
+      class: "bookPara",
+    },
+  },
+  deleteBtn: {
+    element: "button",
+    attribute: {
+      id: "delete-btn",
+    },
+    text: "Delete",
+  },
+  readBtn: {
+    element: "button",
+    attribute: {
+      id: "read-btn",
+    },
+  },
 };
 
 export { elementAttr };

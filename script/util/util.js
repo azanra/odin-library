@@ -20,4 +20,11 @@ export class Util {
       element.remove();
     }
   }
+  CreateElement(parent, element, elementAttr, text) {
+    const parentEle = document.querySelector(parent);
+    const newElement = document.createElement(element);
+    Util.setMultipleAttr(newElement, elementAttr);
+    newElement.textContent = text;
+    parentEle.append(newElement);
+  }
 }
