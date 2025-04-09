@@ -3,8 +3,8 @@ import { elementAttr } from "./elementAttr.js";
 
 export class BookCard {
   constructor(library) {
-    const library = library;
-    library.forEach((book, index) => {
+    const libraryArr = library.getLibrary();
+    libraryArr.forEach((book, index) => {
       const attr = {};
       attr.id = index;
       Util.CreateElement(
@@ -32,7 +32,8 @@ export class BookCard {
       Util.CreateElement(
         parentElement,
         elementAttr.readBtn.element,
-        elementAttr.readBtn.attribute
+        elementAttr.readBtn.attribute,
+        elementAttr.readBtn.text
       );
     }
   }

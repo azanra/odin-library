@@ -197,6 +197,7 @@ const elementAttr = {
     attribute: {
       id: "read-btn",
     },
+    text: "Read",
   },
 };
 

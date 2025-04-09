@@ -9,9 +9,9 @@ export class Util {
     return getElement.value;
   }
   static removeAllBook(library) {
-    library.forEach((index) => {
-      const book = document.querySelector(`[id='${index}']`);
-      book.remove();
+    const libraryArr = library.getLibrary();
+    libraryArr.forEach((index) => {
+      Util.removeElement(`[id='${index}']`);
     });
   }
   static removeElement(query) {
