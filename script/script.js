@@ -1,5 +1,3 @@
-import { NewBookControlller } from "./controller/newBookController.js";
+import { Controller } from "./controller/controller.js";
 
-let myLibrary = [];
-
-myLibrary = NewBookControlller(myLibrary);
+const controller = new Controller();
