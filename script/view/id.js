@@ -1,20 +1,20 @@
-import { CreateElement } from "./createElement.js";
+import { Util } from "../util/util.js";
 import { elementAttr } from "./elementAttr.js";
 
 export class IdInput {
   constructor() {
-    CreateElement(
+    Util.CreateElement(
       elementAttr.idContainer.parent,
       elementAttr.idContainer.element,
       elementAttr.idContainer.attribute
     );
-    CreateElement(
+    Util.CreateElement(
       elementAttr.idLabel.parent,
       elementAttr.idLabel.element,
       elementAttr.idLabel.attribute,
       elementAttr.idLabel.textContent
     );
-    CreateElement(
+    Util.CreateElement(
       elementAttr.idInput.parent,
       elementAttr.idInput.element,
       elementAttr.idInput.attribute

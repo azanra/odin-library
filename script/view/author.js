@@ -1,20 +1,20 @@
-import { CreateElement } from "./createElement.js";
+import { Util } from "../util/util.js";
 import { elementAttr } from "./elementAttr.js";
 
 export class AuthorInput {
   constructor() {
-    CreateElement(
+    Util.CreateElement(
       elementAttr.authorContainer.parent,
       elementAttr.authorContainer.element,
       elementAttr.authorContainer.attribute
     );
-    CreateElement(
+    Util.CreateElement(
       elementAttr.authorLabel.parent,
       elementAttr.authorLabel.element,
       elementAttr.authorLabel.attribute,
       elementAttr.authorLabel.text
     );
-    CreateElement(
+    Util.CreateElement(
       elementAttr.authorInput.parent,
       elementAttr.authorInput.element,
       elementAttr.authorInput.attribute

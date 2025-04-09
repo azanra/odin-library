@@ -1,31 +1,31 @@
-import { CreateElement } from "./createElement.js";
+import { Util } from "../util/util.js";
 import { elementAttr } from "./elementAttr.js";
 
 export class ReadStatusInput {
   constructor() {
-    CreateElement(
+    Util.CreateElement(
       elementAttr.readContainer.parent,
       elementAttr.readContainer.element,
       elementAttr.readContainer.attribute
     );
-    CreateElement(
+    Util.CreateElement(
       elementAttr.readLabel.parent,
       elementAttr.readLabel.element,
       elementAttr.readLabel.attribute,
       elementAttr.readLabel.text
     );
-    CreateElement(
+    Util.CreateElement(
       elementAttr.readSelect.parent,
       elementAttr.readSelect.element,
       elementAttr.readSelect.attribute
     );
-    CreateElement(
+    Util.CreateElement(
       elementAttr.haveReadOption.parent,
       elementAttr.haveReadOption.element,
       elementAttr.haveReadOption.attribute,
       elementAttr.haveReadOption.text
     );
-    CreateElement(
+    Util.CreateElement(
       elementAttr.notReadOption.parent,
       elementAttr.notReadOption.element,
       elementAttr.notReadOption.attribute,
