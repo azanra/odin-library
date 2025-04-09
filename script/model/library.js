@@ -5,15 +5,15 @@ export class Library {
   constructor() {
     this.#library = [];
   }
-  addBook(title, author, pages, haveRead) {
-    const book = new Book(title, author, pages, haveRead);
+  addBook(id, title, author, pages, haveRead) {
+    const book = new Book(id, title, author, pages, haveRead);
     this.#library.push(book);
   }
   removeBook(inputBookId) {
-    const updateLibrary = this.#library.filter(
+    const updatedLibrary = this.#library.filter(
       (book) => book.id !== inputBookId
     );
-    this.#library = updateLibrary;
+    this.#library = updatedLibrary;
   }
   updateBook(inputBookId) {
     this.#library.map((book) => {
@@ -21,5 +21,8 @@ export class Library {
         book.isRead();
       }
     });
+  }
+  getLibrary() {
+    return this.#library;
   }
 }
