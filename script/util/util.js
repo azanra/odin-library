@@ -10,8 +10,8 @@ export class Util {
   }
   static removeAllBook(library) {
     const libraryArr = library.getLibrary();
-    libraryArr.forEach((index) => {
-      Util.removeElement(`[id='${index}']`);
+    libraryArr.forEach((book) => {
+      Util.removeElement(`[id='${book.id}']`);
     });
   }
   static removeElement(query) {

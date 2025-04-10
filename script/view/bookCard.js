@@ -4,27 +4,27 @@ import { elementAttr } from "./elementAttr.js";
 export class BookCard {
   constructor(library) {
     const libraryArr = library.getLibrary();
-    libraryArr.forEach((book, index) => {
+    libraryArr.forEach((book) => {
       const attr = {};
-      attr.id = index;
+      attr.id = book.id;
       Util.CreateElement(
         elementAttr.bookContainer.parent,
         elementAttr.bookContainer.element,
         attr
       );
       Util.CreateElement(
-        `[id='${attr.id}']`,
+        `[id='${book.id}']`,
         elementAttr.bookPara.element,
         elementAttr.bookPara.attr,
         book.info()
       );
       Util.CreateElement(
-        `[id='${attr.id}']`,
+        `[id='${book.id}']`,
         elementAttr.deleteBtn.element,
         elementAttr.deleteBtn.attribute,
         elementAttr.deleteBtn.text
       );
-      this.toggleReadBtn(book, `[id='${attr.id}']`);
+      this.toggleReadBtn(book, `[id='${book.id}']`);
     });
   }
   toggleReadBtn(book, parentElement) {
