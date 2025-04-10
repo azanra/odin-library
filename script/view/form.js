@@ -1,6 +1,5 @@
 import { AuthorInput } from "./author.js";
 import { elementAttr } from "./elementAttr.js";
-import { IdInput } from "./id.js";
 import { PageInput } from "./page.js";
 import { ReadStatusInput } from "./read.js";
 import { TitleInput } from "./title.js";
@@ -18,7 +17,6 @@ export class FormInput {
       elementAttr.form.element,
       elementAttr.form.attribute
     );
-    const idInput = new IdInput();
     const titleInput = new TitleInput();
     const authorInput = new AuthorInput();
     const pageInput = new PageInput();

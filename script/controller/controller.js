@@ -6,6 +6,7 @@ import { FormInput } from "../view/form.js";
 export class Controller {
   constructor() {
     this.library = new Library();
+    this.id = 0;
     this.inputBtn = document.querySelector(".input-btn");
     this.inputBtn.addEventListener("click", () => {
       Util.removeElement(".form-dialog");
@@ -26,7 +27,7 @@ export class Controller {
     this.submitBtn = document.querySelector("#submit-btn");
     this.submitBtn.addEventListener("click", () => {
       Util.removeAllBook(this.library);
-      const idInputValue = Util.getElementValue("#id-input");
+      const idInputValue = this.id;
       const titleInputValue = Util.getElementValue("#title-input");
       const authorInputValue = Util.getElementValue("#author-input");
       const pageInputValue = Util.getElementValue("#page-input");
@@ -38,6 +39,7 @@ export class Controller {
         pageInputValue,
         readInputValue
       );
+      this.id++;
       this.bookCard = new BookCard(this.library);
       this.deleteBtnListener();
       this.readBtnListener();
@@ -49,7 +51,7 @@ export class Controller {
     this.listDeleteBtn.forEach((item) => {
       item.addEventListener("click", () => {
         Util.removeAllBook(this.library);
-        let bookId = item.parentNode.id;
+        let bookId = Number(item.parentNode.id);
         this.library.removeBook(bookId);
         this.resetView();
       });
@@ -59,7 +61,7 @@ export class Controller {
     this.readBtn = document.querySelectorAll("#read-btn");
     this.readBtn.forEach((item) => {
       item.addEventListener("click", () => {
-        const bookId = item.parentNode.id;
+        const bookId = Number(item.parentNode.id);
         this.library.updateBook(bookId);
         Util.removeAllBook(this.library);
         this.resetView();
