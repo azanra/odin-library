@@ -40,6 +40,7 @@ export class Controller {
       );
       this.bookCard = new BookCard(this.library);
       this.deleteBtnListener();
+      this.readBtnListener();
       this.dialog.close();
     });
   }
@@ -50,9 +51,7 @@ export class Controller {
         Util.removeAllBook(this.library);
         let bookIndex = item.parentNode.id;
         this.library.removeBook(bookIndex);
-        this.bookCard = new BookCard(this.library);
-        this.deleteBtnListener();
-        this.readBtnListener();
+        this.resetView();
       });
     });
   }
@@ -61,11 +60,14 @@ export class Controller {
     this.readBtn.forEach((item) => {
       item.addEventListener("click", () => {
         item.isRead();
-        this.resetView(item);
+        Util.removeAllBook(this.library);
+        this.resetView();
       });
     });
   }
   resetView() {
-    Util.removeAllBook(this.library);
+    this.bookCard = new BookCard(this.library);
+    this.deleteBtnListener();
+    this.readBtnListener();
   }
 }
