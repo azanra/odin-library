@@ -39,6 +39,7 @@ export class Controller {
         readInputValue
       );
       this.bookCard = new BookCard(this.library);
+      this.deleteBtnListener();
       this.dialog.close();
     });
   }
@@ -46,7 +47,12 @@ export class Controller {
     this.listDeleteBtn = document.querySelectorAll("#delete-btn");
     this.listDeleteBtn.forEach((item) => {
       item.addEventListener("click", () => {
-        this.resetView(item);
+        Util.removeAllBook(this.library);
+        let bookIndex = item.parentNode.id;
+        this.library.removeBook(bookIndex);
+        this.bookCard = new BookCard(this.library);
+        this.deleteBtnListener();
+        this.readBtnListener();
       });
     });
   }
@@ -59,12 +65,7 @@ export class Controller {
       });
     });
   }
-  resetView(item) {
-    let bookIndex = item.parentNode.id;
+  resetView() {
     Util.removeAllBook(this.library);
-    this.library.removeBook(bookIndex);
-    this.bookCard = new BookCard(this.library);
-    this.deleteBtnListener();
-    this.readBtnListener();
   }
 }
