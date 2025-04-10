@@ -49,8 +49,8 @@ export class Controller {
     this.listDeleteBtn.forEach((item) => {
       item.addEventListener("click", () => {
         Util.removeAllBook(this.library);
-        let bookIndex = item.parentNode.id;
-        this.library.removeBook(bookIndex);
+        let bookId = item.parentNode.id;
+        this.library.removeBook(bookId);
         this.resetView();
       });
     });
@@ -59,7 +59,8 @@ export class Controller {
     this.readBtn = document.querySelectorAll("#read-btn");
     this.readBtn.forEach((item) => {
       item.addEventListener("click", () => {
-        item.isRead();
+        const bookId = item.parentNode.id;
+        this.library.updateBook(bookId);
         Util.removeAllBook(this.library);
         this.resetView();
       });
