@@ -7,7 +7,7 @@ export class Controller {
   constructor() {
     this.library = new Library();
     this.inputBtn = document.querySelector(".input-btn");
-    this.inputBtn.addEventListener(click, () => {
+    this.inputBtn.addEventListener("click", () => {
       Util.removeElement(".form-dialog");
       const formInput = new FormInput();
       this.dialog = document.querySelector(".form-dialog");
