@@ -17,7 +17,7 @@ export class Library {
   }
   updateBook(inputBookId) {
     this.#library.map((book) => {
-      if (book.id === Number(inputBookId)) {
+      if (book.id === inputBookId) {
         book.isRead();
       }
     });
