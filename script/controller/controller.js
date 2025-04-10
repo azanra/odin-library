@@ -12,6 +12,7 @@ export class Controller {
       const formInput = new FormInput();
       this.dialog = document.querySelector(".form-dialog");
       this.dialog.showModal();
+      this.submitBtnListener();
       this.cancelBtnListener();
     });
   }
@@ -22,7 +23,7 @@ export class Controller {
     });
   }
   submitBtnListener() {
-    this.submitBtn = document.querySelector("#submitBtn");
+    this.submitBtn = document.querySelector("#submit-btn");
     this.submitBtn.addEventListener("click", () => {
       Util.removeAllBook(this.library);
       const idInputValue = Util.getElementValue("#id-input");
@@ -37,9 +38,9 @@ export class Controller {
         pageInputValue,
         readInputValue
       );
+      this.bookCard = new BookCard(this.library);
+      this.dialog.close();
     });
-    this.bookCard = new BookCard(this.library);
-    this.dialog.close();
   }
   deleteBtnListener() {
     this.listDeleteBtn = document.querySelectorAll("#delete-btn");
