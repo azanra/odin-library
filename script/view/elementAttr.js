@@ -115,6 +115,8 @@ const elementAttr = {
       id: "page-input",
       placeholder: "page amount",
       required: "",
+      min: "50",
+      max: "3000",
     },
   },
   readContainer: {

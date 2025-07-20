@@ -11,6 +11,7 @@ export class Controller {
     this.inputBtn.addEventListener("click", () => {
       Util.removeElement(".form-dialog");
       const formInput = new FormInput();
+      this.validatePageAmountListener();
       this.dialog = document.querySelector(".form-dialog");
       this.dialog.showModal();
       this.submitBtnListener();
@@ -46,6 +47,24 @@ export class Controller {
       this.readBtnListener();
       this.dialog.close();
     });
+  }
+  validatePageAmount() {
+    const pageInput = document.querySelector("#page-input");
+    if (pageInput.validity.rangeUnderflow) {
+      pageInput.setCustomValidity(
+        `The minimum page inputted page should be at least greater than ${pageInput.min} pages`
+      );
+    } else if (pageInput.validity.rangeOverflow) {
+      pageInput.setCustomValidity(  
+        `The maximum page inputted page should be at least less than ${pageInput.max} pages`
+      );
+    } else {
+      pageInput.setCustomValidity("");
+    }
+  }
+  validatePageAmountListener() {
+    const pageInput = document.querySelector("#page-input");
+    pageInput.addEventListener("input", this.validatePageAmount);
   }
   deleteBtnListener() {
     this.listDeleteBtn = document.querySelectorAll("#delete-btn");
