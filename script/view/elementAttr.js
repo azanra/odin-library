@@ -62,6 +62,7 @@ const elementAttr = {
       type: "text",
       id: "title-input",
       placeholder: "title",
+      required: "",
     },
   },
   authorContainer: {
@@ -87,6 +88,7 @@ const elementAttr = {
       type: "text",
       id: "author-input",
       placeholder: "author",
+      required: "",
     },
   },
   pageContainer: {
@@ -112,6 +114,7 @@ const elementAttr = {
       type: "number",
       id: "page-input",
       placeholder: "page amount",
+      required: "",
     },
   },
   readContainer: {
@@ -136,7 +139,16 @@ const elementAttr = {
     attribute: {
       name: "HaveRead",
       id: "read-select",
+      required: "",
     },
+  },
+  defaultReadOption: {
+    parent: "#read-select",
+    element: "option",
+    attribute: {
+      value: "",
+    },
+    text: "Please select a value",
   },
   haveReadOption: {
     parent: "#read-select",
@@ -158,7 +170,7 @@ const elementAttr = {
     parent: ".form-input",
     element: "button",
     attribute: {
-      type: "button",
+      type: "submit",
       id: "submit-btn",
     },
     text: "Submit",

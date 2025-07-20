@@ -24,8 +24,9 @@ export class Controller {
     });
   }
   submitBtnListener() {
-    this.submitBtn = document.querySelector("#submit-btn");
-    this.submitBtn.addEventListener("click", () => {
+    this.submitBtn = document.querySelector(".form-input");
+    this.submitBtn.addEventListener("submit", (e) => {
+      e.preventDefault();
       Util.removeAllBook(this.library);
       const idInputValue = this.id;
       const titleInputValue = Util.getElementValue("#title-input");

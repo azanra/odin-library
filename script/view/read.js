@@ -20,6 +20,12 @@ export class ReadStatusInput {
       elementAttr.readSelect.attribute
     );
     Util.CreateElement(
+      elementAttr.defaultReadOption.parent,
+      elementAttr.defaultReadOption.element,
+      elementAttr.defaultReadOption.attribute,
+      elementAttr.defaultReadOption.text
+    );
+    Util.CreateElement(
       elementAttr.haveReadOption.parent,
       elementAttr.haveReadOption.element,
       elementAttr.haveReadOption.attribute,
